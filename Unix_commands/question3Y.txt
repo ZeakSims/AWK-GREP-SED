@@ -1,0 +1,9 @@
+#!/bin/bash
+awk 'BEGIN { max -1; min = -1 }
+$1 == "ATOM" { 
+max = max < $8 ? $8 : max;
+min = (min == -1 || min > $8) ? $8 : min 
+}
+END{printf "max = %.3f\nmin = %.3f\n",max, min }
+' 4HKD.pdb
+

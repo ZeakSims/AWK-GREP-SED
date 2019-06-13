@@ -1,0 +1,3 @@
+#!/bin/bash
+grep 'ATOM'|sort -nk11 4HKD.pdb>question6.txt
+

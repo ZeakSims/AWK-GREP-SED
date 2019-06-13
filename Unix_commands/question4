@@ -1,0 +1,2 @@
+#!/bin/bash
+grep 'ATOM'| awk '{total+=$7}END{print total/NR}' 4HKD.pdb
